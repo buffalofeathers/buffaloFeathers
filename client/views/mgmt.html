@@ -1,0 +1,8 @@
+ <h1 id="createU"><center>Users</center></h1>
+    <div ng-repeat="u in users" class="container">
+        <div class="eachBlog">
+            <h3>{{ u.firstname }} {{ u.lastname }}</h3>
+            <h4>{{ u.email }}</h4>
+            <button ng-click="deleteUser(u)" class="regBut">Delete User</button>
+        </div>
+     </div>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="p2" id="background">
+    <head>
+        <base href="/">
+        <meta charset="utf-8">
+        <meta name="fragment" content="!">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+        <meta name="viewport" content="user-scalable=no,initial-scale=1, maximum-scale=1, minimum-scale=1,width=device-width">       
+        <title>{{ seo.title }}</title>
+        <meta property="og:title" content="{{ seo.title }}">
+        <meta property="twitter:title" content="{{ seo.title }}">
+        <meta property="og:image" content="{{ seo.image }}">
+        <meta property="twitter:image" content="{{ seo.image }}">
+        <meta property="og:url" content="{{ seo.url }}">
+        <meta property="twitter:url" content="{{ seo.url }}">
+        <meta property="description" content="{{ seo.description }}">
+        <meta property="og:description" content="{{ seo.description }}">
+        <meta property="twitter:description" content="{{ seo.description }}">
+        <script>window.prerenderReady = false;</script>
+        <script src="http://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+        <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>-->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-resource.js'></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+        <script src="factories.js"></script>
+        <script src="services.js"></script>
+        <script src="controllers.js"></script>
+        <script src="directives.js"></script>
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Buffalo Feathers</title>
+    </head>
+    <body class="container-fluid">
+        <!--<div class="header" ng-controller="HomePageController">-->
+            <!--<div id="buttonsbar">-->
+                <!--<a ng-href="/compose"><button class="regBut">Compose</button></a>-->
+                <!--<a ng-href="/create"><button class="regBut btn btn-default">SignUp</button></a>
+                <a ng-href="/login"><button class="regBut btn btn-default">LogIn</button></a>
+                <button ng-click="logout()" class="regBut btn btn-default">LogOut</button>-->
+                <!--<a ng-href="/api/users/logout"><button class="regBut">LogOut</button>-->
+            <!--</div>
+                <div id="picDiv">
+                    <img src="Bison.png" id='pic'>
+                </div>
+                    <div>          
+                        <a ng-href="/" id="appTitle"><h2>Buffalo Feathers</h2></a>
+                    </div>
+        </div>-->
+
+            <div id="border">
+                    <nav class="navbar navbar-inverse top container-fluid">
+                        <div class="container container-fluid">                        
+                            <div class="btn-group indexBut" role="group" aria-label="...">
+                                <a class="homelink" ng-href="/"><button type="button" class="btn btn-default container-fluid">home</button></a>
+                                <a href="/login"><button type="button" class="btn btn-default container-fluid">login</button></a>
+                                
+                                <a href="/create"><button type="button" class="btn btn-default container-fluid">sign-up</button></a>
+                                
+                                <button type="button" id="logbut" class="btn btn-default" ng-click="logout()">logout</button>
+                            </div>
+                        </div>
+                    </nav>
+                        <div id="jumbotroncontainer">
+                            <div class="jumbotron container-fluid">
+                                <div id="titlenew">Buffalo Feathers</a></div>
+                            </div>
+                        </div>
+                    <div ng-view></div>
+                    <!--<button type="button" class="btn btn-default container-fluid" ng-click="logout()">logout</button>-->
+                        <div id="mail">
+                            <a id="title" href="mailto:jessepayne@gmail.com?Subject=Saying%20Hello" target="_top"><button type="button" id="conbut" class="btn btn-default">contact me</button></a>
+                        </div>
+                    <!--<script type="text/javascript" src="https://js.stripe.com/v2/"></script>
+                    <script type="text/javascript">
+                        Stripe.setPublishableKey('pk_test_rOD0ltHhY9hNXnExkM3AaK3A');
+                    </script>-->
+            </div>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<div class="pages">
+    <div>   
+        <div ng-repeat="blog in blogList" class="container">
+             <div class="eachBlog">
+                <h2 class="blogtitle">{{ blog.title }}</h2>
+                <h3 class="username">{{ blog.authorfirstname }} {{ blog.authorlastname }}</h3>
+                <h6 class="blogdate">{{ blog.categoryname }}</h6>
+                <h6 class="blogdate">{{ blog.createdAt | date: "medium" }}</h6>
+                
+                <!--<blog-post blog-data="blog"></blog-post>-->
+                <a ng-href='/{{ blog.id }}' class="read">Read</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
